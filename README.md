@@ -73,3 +73,8 @@ export default defineConfig([
 ])
 
 ```
+
+
+# Como iniciar o projeto
+
+Danilo, como vc é meio songamonga, pra iniciar o projeto vc tem q ter o node.js instalado no pc, clona o projeto, da um `npm i` no terminal e dps um `npm run dev`, ele vai abrir no localhost, o link vai aparecer no terminal, vai escrever codigo se n tu vai acabar no atacadão
