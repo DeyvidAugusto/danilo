@@ -32,7 +32,7 @@ export function Icon({ name, className = 'h-5 w-5' }: IconProps) {
     case 'menu':
       return (
         <svg {...common}>
-          <path d="M4 6h16M4 12h16M4 18h16" />
+          <path d="M5 5h14M5 12h14M5 19h14" />
         </svg>
       )
     case 'x':

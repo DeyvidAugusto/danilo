@@ -49,8 +49,14 @@ export function HomePage() {
           <section key={category.id} id={category.id} className="scroll-mt-40 pt-14">
             <FadeContent>
               <SpotlightCard className="flex items-end justify-between gap-4 p-6">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-sky-100 text-sky-600 dark:bg-sky-950 dark:text-sky-400">
+                <span
+                  aria-hidden
+                  className={`absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br ${category.gradient} opacity-15 blur-2xl`}
+                />
+                <div className="relative flex items-center gap-3">
+                  <span
+                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${category.gradient} text-white shadow-lg shadow-sky-500/20`}
+                  >
                     <Icon name={category.icon} className="h-6 w-6" />
                   </span>
                   <div>
@@ -60,9 +66,12 @@ export function HomePage() {
                     <p className="text-sm text-neutral-500 dark:text-neutral-400">
                       {category.description}
                     </p>
+                    <span
+                      className={`mt-2 block h-0.5 w-16 rounded-full bg-gradient-to-r ${category.gradient}`}
+                    />
                   </div>
                 </div>
-                <span className="whitespace-nowrap text-sm text-neutral-400 dark:text-neutral-500">
+                <span className="relative whitespace-nowrap rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 dark:border-sky-800 dark:bg-sky-950 dark:text-sky-400">
                   {items.length} {items.length === 1 ? 'item' : 'itens'}
                 </span>
               </SpotlightCard>

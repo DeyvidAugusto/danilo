@@ -2,6 +2,7 @@
 import { useTheme } from '../../hooks/useTheme'
 import { products } from '../../data/products'
 import GridMotion from '../bits/GridMotion'
+import GradientText from '../bits/GradientText'
 import SpecularButton from '../bits/SpecularButton'
 import SplitText from '../bits/SplitText'
 import { Icon } from '../ui/Icon'
@@ -46,27 +47,31 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full px-4 py-20 sm:px-6">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <h1 className="flex flex-wrap items-baseline justify-center gap-x-3">
-            <SplitText
-              text="Cuidar"
-              tag="span"
-              className="text-6xl font-bold leading-none tracking-tight text-neutral-900 sm:text-8xl dark:text-white"
-              splitType="words, chars"
-              duration={0.9}
-              delay={45}
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-            />
-            <SplitText
-              text="Bem"
-              tag="span"
-              className="text-6xl font-bold leading-none tracking-tight text-neutral-400 sm:text-8xl dark:text-neutral-500"
-              splitType="words, chars"
-              duration={0.9}
-              delay={120}
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-            />
+          <h1>
+            <GradientText colors={['#7dd3fc', '#38bdf8', '#0284c7']} animationSpeed={3}>
+              <span className="flex flex-wrap items-baseline justify-center gap-x-3">
+                <SplitText
+                  text="Cuidar"
+                  tag="span"
+                  className="text-6xl font-bold leading-none tracking-tight sm:text-8xl"
+                  splitType="words, chars"
+                  duration={0.9}
+                  delay={45}
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                />
+                <SplitText
+                  text="Bem"
+                  tag="span"
+                  className="text-6xl font-bold leading-none tracking-tight sm:text-8xl"
+                  splitType="words, chars"
+                  duration={0.9}
+                  delay={120}
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                />
+              </span>
+            </GradientText>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-300">
             Produtos de apoio e acessibilidade para o seu dia a dia
